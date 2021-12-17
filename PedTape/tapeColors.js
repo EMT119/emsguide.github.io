@@ -1,5 +1,5 @@
 let pink =  `<div id="pink">
-<h1><i class="back fas fa-arrow-left" value="colorGrid"></i>Pink 6-7kg</h1>
+<h1><i class="backToGrid fas fa-arrow-left" value="colorGrid"></i>Pink 6-7kg</h1>
 <div class="inner-container">
     <table>
         <!--Cardioversion-->
@@ -220,7 +220,7 @@ let pink =  `<div id="pink">
 </div>`;
 
 let red = `<div id="red">
-<h1><i class="back fas fa-arrow-left" value="colorGrid"></i>Red 8-9kg</h1>
+<h1><i class="backToGrid fas fa-arrow-left" value="colorGrid"></i>Red 8-9kg</h1>
 <div class="inner-container">
     <table>
         <tr>
@@ -438,7 +438,7 @@ let red = `<div id="red">
 </div>`
 
 let purple = `<div id="purple">
-    <h1><i class="back fas fa-arrow-left" value="colorGrid"></i>Purple 10-11kg</h1>
+    <h1><i class="backToGrid fas fa-arrow-left" value="colorGrid"></i>Purple 10-11kg</h1>
     <div class="inner-container">
         <table>
             <tr>

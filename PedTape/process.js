@@ -10,6 +10,9 @@ document.addEventListener('click', (e) => {
     if (e.target.classList[0] == "back") {
         currentColor.innerHTML = "";
         displayControl();
+    } else if (e.target.classList[0] == "backToGrid") {
+        currentColor.innerHTML = "";
+        displayControl("colorGrid", "grid")
     }
 });
 
