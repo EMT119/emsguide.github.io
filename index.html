@@ -10,11 +10,13 @@
 <body>
     <h1>EMS <br> Guidebook</h1>
     <div class="flex-container">
-        <button onclick="window.location='./PedTape/pedTape.html'">Pediatric Tape</button>
-        <button onclick="window.location='./narrative.html'">DCHARTE</button>
+        <button class="menu-btn" onclick="window.location='./Metronome/metronome.html'">Metronome</button>
+        <button class="menu-btn" onclick="window.location='./PedTape/pedTape.html'">Pediatric Tape</button>
+        <button class="menu-btn" onclick="window.location='./narrative.html'">DCHARTE</button>
     </div>
 </body>
 <script>
+    // Loads service worker when window is loaded
     if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
             navigator.serviceWorker

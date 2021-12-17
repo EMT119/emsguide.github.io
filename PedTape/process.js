@@ -1,20 +1,45 @@
-document.getElementById("colorDisplay").innerHTML = pink;
-displayControl("colorDisplay", "block");
+displayControl();
+let currentColor = document.getElementById("colorDisplay");
 
 document.getElementById("viewGrid").addEventListener("click", () => {
     document.getElementById("main").style.display = "none";
     document.getElementById("colorGrid").style.display = "grid";
 });
 
-document.querySelectorAll(".back").forEach((e) => {
-    e.addEventListener("click", (btn) => {
+document.addEventListener('click', (e) => {
+    if (e.target.classList[0] == "back") {
+        currentColor.innerHTML = "";
         displayControl();
-    });
+    }
 });
 
 document.querySelectorAll(".mainBtn").forEach((btn) => {
     btn.addEventListener("click", (e) => {
-        displayControl(e.target.value, "block");
+        //displayControl(e.target.value, "block");
+        switch(e.target.value) {
+            case "pink":
+                currentColor.innerHTML = pink;
+                break;
+            case "red":
+                currentColor.innerHTML = red;
+                break;
+            case "purple":
+                currentColor.innerHTML = purple;
+                break;
+            case "yellow":
+                break;
+            case "white":
+                break;
+            case "blue":
+                break;
+            case "orange":
+                break;
+            case "green":
+                break;
+            default: //default is green
+                break;
+        }
+        displayControl("colorDisplay", "grid")
     })
 });
 

@@ -1,4 +1,25 @@
 const cacheName = "V1";
+const cacheFiles = [
+    "index.html",
+    "main.css",
+    "narrative.html",
+    "./Metronome/metronome.css",
+    "./Metronome/metronome.flac",
+    "./Metronome/metronome.html",
+    "./Metronome/metronome.js",
+    "./PedTape/pedTape.html",
+    "./PedTape/process.js",
+    "./PedTape/style.css",
+    "./PedTape/tapeColors.js",
+];
+
+// Call install event
+self.addEventListener("install", (e) => {
+    e.waitUntil(
+        caches.open(cacheName)
+        .then(cache => cache.addAll(cacheFiles))
+    );
+});
 
 // Call activate event
 self.addEventListener('activate', (e) => {
@@ -18,15 +39,8 @@ self.addEventListener('activate', (e) => {
 //Call fetch event
 self.addEventListener('fetch', (e) => {
     e.respondWith(
-        fetch(e.request)
-        .then(res => {
-            const clone = res.clone();
-
-            caches.open(cacheName).then(cache => {
-                cache.put(e.request, clone);
-            });
-            return res;
+        fetch(e.request).catch(() => {
+            return caches.match(e.request);
         })
-        .catch(err => caches.match(e.request).then(res => res))
-    );
+    )
 });

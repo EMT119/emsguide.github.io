@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DCHARTE</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <style>
         body {
             font-family: arial;
             font-size: 1.15rem;
+            margin: 0;
         }
 
         span {
@@ -18,6 +21,11 @@
 
         h1 {
             text-align: center;
+            background-color: #475569;
+            color: white;
+            padding: 1rem;
+            margin: 0;
+            font-size: 1.75rem;
         }
 
         button>a {
@@ -27,10 +35,22 @@
     font-weight: 500;
 }
 
+p {
+    padding: 0.25rem 0.75rem;
+}
+
+i {
+    float: left;
+}
+
+i:hover {
+    cursor: pointer;
+}
+
     </style>
 </head>
 <body>
-    <h1><a href="index.html">Back</a>DCHARTE Narrative</h1>
+    <h1><i id="back" class="fas fa-arrow-left"></i>DCHARTE Narrative</h1>
     <p><span>D-</span> [Station] was dispatched for [dispatch complaint]. [Unit and level] responded [lights? sirens?]. Any other units dispatched? Did you add any units? Were there any exceptions to dispatch(delayed, staged for law enforcement). Upon arrival was anything noted?</p>
     <p><span>C-</span> Upon arrival Pt had complaints of [patient complaint]. Pt had secondary complaints of [secondary complaint]. Did Pt have any chest pain or difficulty breathing? Did the Pt have any pain not associated with chest pain? What is the result of the COVID-19 screening?</p>
     <p><span>H-</span> What were the event leading up to 911 being called? Does the Pt have a history of the complaint? Obtain onset and time from OPQRST. Obtain allergies, medications, and last oral intake.</p>
@@ -40,4 +60,9 @@
     <p><span>E-</span> Any exceptions (i.e. personal belongings, medications, and refusal of specific care [if a PT refuses something have them sign saying they are refusing that specific care]). Was there any delay in response, on-scene, or transport. Were there any barriers to PT care?</p>
     <p><strong>Name and Credentials</strong></p>
 </body>
+<script>
+    document.getElementById("back").addEventListener("click", () => {
+    window.location = "./index.html";
+});
+</script>
 </html>

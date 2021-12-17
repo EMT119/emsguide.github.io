@@ -2,7 +2,6 @@
 body {
     margin: 0;
     font-family: arial;
-    overflow-y: hidden;
 }
 
 button {
@@ -79,6 +78,7 @@ th.secondary {
 
 #colorGrid {
     display: grid;
+    height: 100vh;
     grid-template-columns: repeat(5, 2fr);
     grid-template-rows: repeat(11, 1fr);
 }
