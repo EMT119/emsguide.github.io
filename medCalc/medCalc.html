@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Med Calc</title>
+    <link rel="stylesheet" href="calc.css">
+    <script defer src="calc.js"></script>
+    <script src="math.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+    <div id="nav">
+        <span id="navClose" onclick="openNav(false)">X</span>
+        <button onclick="window.location='../index.html'">Back</button>
+    </div>
+    <div class="container">
+        <div class="row">
+            <i onclick="openNav(true)" class="fas fa-bars"></i>
+            <input id="current"></input>
+        </div>
+        <div class="row">
+            <button style="grid-column: 1 / 3;">lb to kg</button>
+            <button>Clear</button>
+            <button class="special">/</button>
+        </div>
+        <div class="row">
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="special">*</button>
+        </div>
+        <div class="row">
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="special">-</button>
+        </div>
+        <div class="row">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="special">+</button>
+        </div>
+        <div class="row">
+            <button style="grid-column: 1 /3;">0</button>
+            <button>.</button>
+            <button class="special">=</button>
+        </div>
+    </div>
+</body>
+</html>
