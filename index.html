@@ -1,32 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMS Guidebook</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
-    <h1>EMS Guidebook</h1>
-    <h2>Resources</h2>
-    <div class="flex-container">
-        <button class="menu-btn" onclick="window.location='./PedTape/pedTape.html'">Pediatric Tape</button>
-        <button class="menu-btn" onclick="window.location='./narrative.html'">DCHARTE</button>
-    </div>
-    <h2>Tools</h2>
-    <div class="flex-container">
-        <button class="menu-btn" onclick="window.location='./Metronome/metronome.html'">Metronome</button>
-        <button class="menu-btn" onclick="window.location='./medCalc/medCalc.html'">Med Calc</button>
-    </div>
-</body>
-<script>
-    // Loads service worker when window is loaded
-    if ("serviceWorker" in navigator) {
-        window.addEventListener("load", () => {
-            navigator.serviceWorker
-            .register("sw.js")
-        });
-    }
-</script>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>EMS Guidebook</title>
+		<link rel="stylesheet" href="main.css" />
+	</head>
+	<body>
+		<h1 class="main-header">Menu</h1>
+		<div class="container grid grid-2">
+			<button class="menu-btn" onclick="window.location = './narrative/narrative.html'">Narrative</button>
+			<button class="menu-btn red">Code Alert</button>
+			<button class="menu-btn" onclick="window.location = './Metronome/metronome.html'">Metronome</button>
+			<button class="menu-btn">Pediatric Tape</button>
+		</div>
+	</body>
 </html>

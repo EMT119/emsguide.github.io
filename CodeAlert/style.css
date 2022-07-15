@@ -1,0 +1,81 @@
+* {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+button {
+	border-radius: 5px;
+}
+
+.backBtn {
+	float: left;
+}
+
+.backBtn:hover {
+	cursor: pointer;
+}
+
+.grid {
+	display: grid;
+	column-gap: 10px;
+}
+
+.grid-2 {
+	grid-template-columns: 1fr 1fr;
+}
+
+h1.header {
+	text-align: center;
+	background-color: #1e293b;
+	color: white;
+	padding: 1rem;
+	margin: 0;
+	font-size: 1.75rem;
+}
+
+h1 {
+	font-size: 4rem;
+	margin-bottom: 0;
+}
+
+.w3-modal h1 {
+	font-size: 2rem;
+}
+
+h3::before {
+	content: "Pulse check: ";
+}
+
+h3 {
+	margin-top: 0;
+	font-size: 2.75rem;
+}
+
+.w3-modal-content {
+	border-radius: 5px;
+}
+
+.w3-modal-content .w3-display-topright {
+	margin: 0.5rem;
+	border-radius: 2px;
+}
+
+.w3-bar button:first-child {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.w3-bar button:last-child {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.align-center {
+	text-align: center;
+}

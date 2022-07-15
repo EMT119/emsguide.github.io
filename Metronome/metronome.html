@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metronome</title>
-    <link rel="stylesheet" href="metronome.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <script defer src="metronome.js"></script>
-</head>
-<body>
-    <h1><i id="back" class="fas fa-arrow-left"></i>Metronome</h1>
-    <div id="inner-container">
-        <h2 id="seconds">30</h2>
-            <button id="down">Decrease</button>
-            <button id="up">Increase</button>
-        <button id="control">Start</button>
-    </div>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Metronome</title>
+		<script defer src="metronome.js"></script>
+		<link rel="stylesheet" href="../main.css" />
+	</head>
+	<style>
+		.grid-2 {
+			grid-template-columns: auto auto;
+		}
+
+		button {
+			padding: 2rem 0.2rem;
+			font-size: 1.5rem;
+		}
+
+		@media only screen and (max-width: 600px) {
+			div.grid-2 {
+				margin-top: 35%;
+			}
+		}
+	</style>
+	<body>
+		<h1 class="main-header"><span class="backBtn" onclick="window.location ='../index.html'">Back</span>Metronome</h1>
+		<div class="container align-center">
+			<h1 class="font-size-large" id="seconds">30</h1>
+			<div class="grid grid-2">
+				<button id="down">Decrease</button>
+				<button id="up">Increase</button>
+				<button class="grid-span-all green" id="control">Start</button>
+			</div>
+		</div>
+	</body>
 </html>

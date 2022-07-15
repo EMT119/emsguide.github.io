@@ -1,46 +1,45 @@
-let beat = new Audio("./metronome.flac");
 let delay = 30;
 let display = document.getElementById("seconds");
 let timer = null;
 let timerStatus = false;
 
-document.getElementById("back").addEventListener("click", () => {
-    window.location = "../index.html";
-});
-
 document.getElementById("up").addEventListener("click", () => {
-    delay = delay + 1;
-    display.innerHTML = delay;
-    clearInterval(timer);
-    if (timerStatus == true) {
-        startMetronome(delay);
-    }
+	delay = delay + 1;
+	display.innerHTML = delay;
+	clearInterval(timer);
+	if (timerStatus == true) {
+		startMetronome(delay);
+	}
 });
 
 document.getElementById("down").addEventListener("click", () => {
-    delay = delay - 1;
-    display.innerHTML = delay;
-    clearInterval(timer);
-    if (timerStatus == true) {
-        startMetronome(delay);
-    }
+	delay = delay - 1;
+	display.innerHTML = delay;
+	clearInterval(timer);
+	if (timerStatus == true) {
+		startMetronome(delay);
+	}
 });
 
 document.getElementById("control").addEventListener("click", (e) => {
-    if (timerStatus == false) {
-        timerStatus = true;
-        startMetronome(delay);
-        e.target.textContent = "Stop";
-    } else {
-        timerStatus = false;
-        clearInterval(timer);
-        e.target.textContent = "Start";
-    }
+	if (timerStatus == false) {
+		timerStatus = true;
+		startMetronome(delay);
+		e.target.textContent = "Stop";
+		e.target.classList.remove("green");
+		e.target.classList.add("red");
+	} else {
+		timerStatus = false;
+		clearInterval(timer);
+		e.target.textContent = "Start";
+		e.target.classList.remove("red");
+		e.target.classList.add("green");
+	}
 });
 
 function startMetronome(delay) {
-    timer = setInterval(() => {
-        beat.play();
-        console.log("beat");
-    }, (60/delay)*1000);
+	timer = setInterval(() => {
+		let beat = new Audio("./metronome.flac");
+		beat.play();
+	}, (60 / delay) * 1000);
 }
