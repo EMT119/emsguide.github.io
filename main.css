@@ -12,11 +12,6 @@
 	box-sizing: border-box;
 }
 
-a {
-	text-decoration: none;
-	color: inherit;
-}
-
 body {
 	display: flex;
 	flex-direction: column;
@@ -105,6 +100,7 @@ button {
 	background-color: var(--gray);
 	-webkit-appearance: none;
 	border-radius: 10px;
+	color: black;
 	border: 0;
 	padding: 2rem;
 	font-size: 2rem;
