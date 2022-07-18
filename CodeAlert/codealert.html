@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CodeAlert</title>
+		<link rel="stylesheet" href="../w3.css" />
+		<link rel="stylesheet" href="../main.css" />
+		<script defer src="./code.js"></script>
+	</head>
+	<body>
+		<h1 class="main-header"><span class="backBtn" onclick="window.location = '../index.html'">Back</span>DCHARTE Narrative</h1>
+		<div class="margin-top margin-left margin-right grid grid-2 grid-force-2">
+			<button id="startCode" class="w3-button w3-green w3-bar-item w3-xlarge btn-tall">Start</button>
+			<button id="stopCode" class="w3-button w3-red w3-bar-item w3-xlarge btn-tall" disabled>Stop</button>
+		</div>
+		<div class="align-center w3-container w3-margin">
+			<!--Timer-->
+			<h1 id="codeTimer" class="w3-xxxlarge">00:00:00</h1>
+			<h3 id="pulseCheck" class="w3-xxlarge">0:00</h3>
+		</div>
+
+		<!--Defibrillation-->
+		<h1 class="code-header">Defibrillation</h1>
+		<div class="grid grid-3 grid-force-3 margin-left margin-right margin-bottom">
+			<button class="w3-button w3-gray btn-tall defibrillate" value="200">200 J</button>
+			<button class="w3-button w3-gray btn-tall defibrillate" value="300">300 J</button>
+			<button class="w3-button w3-gray btn-tall defibrillate" value="360">360 J</button>
+		</div>
+
+		<!--Procedures-->
+		<h1 class="code-header">Procedures</h1>
+		<div class="grid grid-2 grid-force-2 margin-left margin-right margin-bottom">
+			<button class="w3-button w3-gray w3-xlarge procedure" value="IO/IV">IO/IV</button>
+			<button class="w3-button w3-gray w3-xlarge procedure" value="Supraglottic">Supraglottic</button>
+			<button class="w3-button w3-gray w3-xlarge procedure" value="Intubation">Intubation</button>
+		</div>
+
+		<!--Medications-->
+		<h1 class="code-header">Medications</h1>
+		<div class="grid grid-2 grid-force-2 margin-left margin-right margin-bottom">
+			<button class="w3-button w3-gray w3-xlarge procedure" value="Epinephrine">Epineprhine</button>
+			<button class="w3-button w3-gray w3-xlarge procedure" value="Lidocaine">Lidocaine</button>
+			<button class="w3-button w3-gray w3-xlarge procedure" value="Amiodarone">Amiodarone</button>
+			<button class="w3-button w3-gray w3-xlarge procedure" value="Amiodarone">Amiodarone</button>
+		</div>
+		<!--Modals-->
+		<div id="pulseModal" class="w3-modal">
+			<div class="w3-modal-content" style="padding-bottom: 10px">
+				<div class="w3-container w3-light-gray">
+					<h1>Pulse Check</h1>
+				</div>
+				<div>
+					<span class="w3-button w3-display-topright" style="font-size: 1rem" onclick="document.getElementById('pulseModal').style.display = 'none'">&times;</span>
+					<div class="w3-container w3-margin">
+						<label>Check Pulse</label>
+						<div class="grid grid-2">
+							<button id="pulseCheckPulse" class="w3-button w3-green w3-xlarge">Pulse</button>
+							<button id="pulseCheckNoPulse" class="w3-button w3-red w3-xlarge">No Pulse</button>
+						</div>
+					</div>
+					<div class="w3-container w3-margin">
+						<label>Rhythm on monitor</label>
+						<select id="cardiacRhythm" class="w3-border w3-input select">
+							<option value="Asystole">Asystole</option>
+							<option value="Pulseless Electrical Activity (PEA)">Pulseless Electrical Activity (PEA)</option>
+						</select>
+					</div>
+				</div>
+				<div style="text-align: right; margin-right: 10px">
+					<!--Modal Footer-->
+					<button class="w3-button w3-large small-font" id="resetCheck">Reset Check</button>
+					<button class="w3-button w3-large blue small-font" id="saveCheck">Save and Reset</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
